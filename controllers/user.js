@@ -22,7 +22,7 @@ export const login = async (req, res, next) => {
   }
 };
 
-export const register = async (req, res, next) => {
+export const register = async (req, res) => {
   try {
     const { name, email, password } = req.body;
 
@@ -41,8 +41,6 @@ export const register = async (req, res, next) => {
 };
 
 export const getMyProfile = (req, res) => {
-  const id = "myid";
-
   res.status(200).json({
     success: true,
     user: req.user,
